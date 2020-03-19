@@ -1,12 +1,13 @@
 <?php
 $input = "";
+date_default_timezone_set("America/New_York");
 
 if(!empty($_POST["submit"])){                   //if submitted, then validate
     $input = trim($_POST["input"]);             //trim() removes whitespace from both sides of input
     $input = htmlspecialchars($input);          //htmlspecialchars() converts <, >, "", ', and & to HTML entities
 
     $myfile = fopen("file.txt", "a");
-    $txt = $input."\n";
+    $txt = date("Y/m/d h:i:sa ").$input."\n";
     fwrite($myfile, $txt);
     fclose($myfile);
 }
@@ -14,7 +15,7 @@ if(!empty($_POST["submit"])){                   //if submitted, then validate
 
 <html>
 <head>
-<title>FTP</title>
+<title>txt Form</title>
 
 <link rel="stylesheet" type="text/css" href="default.css">
 
@@ -23,7 +24,7 @@ if(!empty($_POST["submit"])){                   //if submitted, then validate
 <center>
 
 <div class="header">
-    <h1>FTP Form</h1>
+    <h1>Form to txt</h1>
 </div>
 
 <div class="content">
