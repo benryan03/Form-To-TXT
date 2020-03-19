@@ -1,0 +1,24 @@
+body {
+    background-color: lightgray;
+    font-family: sans-serif;    
+}
+
+.header {
+    background-color: whitesmoke;
+    width: 500;
+    padding-top: 5;
+    padding-bottom: 5;
+}
+
+.content {
+    background-color: white;
+    width: 400;
+    padding-top: 20;
+    padding-bottom: 20;
+    padding-left: 50;
+    padding-right: 50;
+}
+
+.error {
+    color: red;
+}
